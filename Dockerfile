@@ -1,5 +1,8 @@
-FROM	openjdk:11
-COPY	/app
+FROM eclipse-temurin:11
+
 WORKDIR /java
-RUN javac helloworld.java
-CMD ["java", "Main"]
+COPY HelloWorld.java .
+
+RUN javac HelloWorld.java
+
+CMD ["java", "HelloWorld"]
